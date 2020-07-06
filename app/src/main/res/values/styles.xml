@@ -14,9 +14,8 @@
 
     <style name="PlusButtons" parent="ScoreButtons">
         <item name="android:src">@drawable/ic_add</item>
-        <item name=
-            "android:contentDescription">@string/add_description</item>
-    </style>
+        <item name= "android:contentDescription">@string/add_description</item>
+</style>
 
     <style name="MinusButtons" parent="ScoreButtons">
         <item name="android:src">@drawable/ic_minus</item>
@@ -31,6 +30,24 @@
         <item name=
             "android:textAppearance">@style/TextAppearance.AppCompat.Display1
         </item>
+    </style>
+
+    <style name="YellowCardButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_marginStart">@dimen/margin_size</item>
+        <item name="android:layout_marginBottom">@dimen/margin_size</item>
+        <item name="android:background">@color/yellow</item>
+    </style>
+
+    <style name="RedCardButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_marginBottom">@dimen/margin_size</item>
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="BlackCardButton">
+        <item name="android:layout_marginBottom">@dimen/margin_size</item>
+        <item name="android:layout_marginEnd">@dimen/margin_size</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>

@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team_1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_size"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/team_2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
@@ -63,48 +63,114 @@
         android:id="@+id/minusTeam1"
         android:layout_width="@dimen/button_size"
         android:layout_height="@dimen/button_size"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_size"
+        android:layout_marginStart="@dimen/margin_size"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/MinusButtons"
-        android:onClick="decreaseScore" />
+        android:onClick="decreaseScore"
+        android:contentDescription="@string/minus_description" />
 
     <ImageButton
         android:id="@+id/addTeam1"
         style="@style/PlusButtons"
         android:layout_width="@dimen/button_size"
         android:layout_height="@dimen/button_size"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="@dimen/margin_size"
+        android:layout_marginEnd="@dimen/margin_size"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="increaseScore" />
+        android:onClick="increaseScore"
+        android:contentDescription="@string/add_description" />
 
     <ImageButton
         android:id="@+id/minusTeam2"
         style="@style/MinusButtons"
         android:layout_width="@dimen/button_size"
         android:layout_height="@dimen/button_size"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/margin_size"
+        android:layout_marginStart="@dimen/margin_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        android:onClick="decreaseScore" />
+        android:onClick="decreaseScore"
+        android:contentDescription="@string/minus_description" />
 
     <ImageButton
         android:id="@+id/addTeam2"
         style="@style/PlusButtons"
         android:layout_width="@dimen/button_size"
         android:layout_height="@dimen/button_size"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="@dimen/margin_size"
+        android:layout_marginEnd="@dimen/margin_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
-        android:onClick="increaseScore" />
+        android:onClick="increaseScore"
+        android:contentDescription="@string/add_description" />
+
+    <Button
+        android:id="@+id/team1YellowCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/YellowCardButton"
+        android:onClick="yellowCard"
+        android:text="@string/team1_ycard_count"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/team1RedCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/RedCardButton"
+        android:onClick="redCard"
+        android:text="@string/team1_rcard_count"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/team1BlackCard"
+        app:layout_constraintStart_toEndOf="@+id/team1YellowCard" />
+
+    <Button
+        android:id="@+id/team1BlackCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BlackCardButton"
+        android:text="@string/team1_bcard_count"
+        android:onClick="blackCard"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/team2YellowCard"
+        style="@style/YellowCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team2_ycard_count"
+        android:onClick="yellowCard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/team2RedCard"
+        style="@style/RedCardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team2_rcard_count"
+        android:onClick="redCard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/team2BlackCard"
+        app:layout_constraintStart_toEndOf="@+id/team2YellowCard" />
+
+    <Button
+        android:id="@+id/team2BlackCard"
+        style="@style/BlackCardButton"
+        android:onClick="blackCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team2_bcard_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

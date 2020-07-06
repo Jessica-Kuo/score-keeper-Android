@@ -8,4 +8,11 @@
     <string name="add_description">add score</string>
     <string name="night_mode">Night Mode</string>
     <string name="day_mode">Day Mode</string>
+    <string name="reset">Reset</string>
+    <string name="team1_ycard_count">0</string>
+    <string name="team1_rcard_count">0</string>
+    <string name="team1_bcard_count">0</string>
+    <string name="team2_ycard_count">0</string>
+    <string name="team2_rcard_count">0</string>
+    <string name="team2_bcard_count">0</string>
 </resources>
